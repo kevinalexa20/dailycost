@@ -1,3 +1,5 @@
+import 'package:dailycost/pages/auth_page.dart';
+import 'package:dailycost/pages/home_page.dart';
 import 'package:dailycost/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
+      routes: {
+        LoginPage.routeName: (context) => LoginPage(),
+        HomePage.routeName: (context) => const HomePage(),
+        AuthPage.routeName: (context) => AuthPage(
+              isLoggedIn: false,
+              accessToken: '',
+            ),
+      },
     );
   }
 }

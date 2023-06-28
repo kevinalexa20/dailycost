@@ -18,7 +18,7 @@ class MyButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: TextButton(
-          onPressed: () {},
+          onPressed: onTap,
           child: Text(
             text,
             style: TextStyle(
